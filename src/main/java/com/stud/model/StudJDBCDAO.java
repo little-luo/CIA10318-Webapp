@@ -18,9 +18,9 @@ public class StudJDBCDAO implements StudDAO_interface {
 	String passwd = "louis75394";
 	
 	public static final String INSERT_STMT = "insert into stud(stud_loc,stud_name,capacity,hourly_rate,equipment) values(?,?,?,?,?)";
-	public static final String GET_ONE_STMT = "select * from stud where stud_id = ?";
 	public static final String DELETE_STMT = "delete from stud where stud_id = ?";
 	public static final String UPDATE_STMT = "update stud set stud_loc = ?, stud_name = ?, capacity = ?, hourly_rate = ?, equipment = ? where stud_id = ?";
+	public static final String GET_ONE_STMT = "select * from stud where stud_id = ?";
 	public static final String GET_ALL_STMT = "select * from stud";
 	
 	@Override
@@ -101,7 +101,7 @@ public class StudJDBCDAO implements StudDAO_interface {
 	}
 
 	@Override
-	public StudVO findByPrimaryKey(Integer studID) {
+	public StudVO findByPrimaryKey(Integer studID) { 
 		StudVO studvo = null;
 		Connection con = null;
 		PreparedStatement pstmt = null;

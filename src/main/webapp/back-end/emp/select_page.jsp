@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<title>IBM Emp: Home</title>
+<title>CIA103G6 Studio: Home</title>
 
 <style>
   table#table-1 {
@@ -60,33 +60,33 @@
     </FORM>
   </li>
 
-<%--   <jsp:useBean id="empSvc" scope="page" class="com.emp.model.EmpService" /> --%>
+  <jsp:useBean id="studSvc" scope="page" class="com.stud.model.StudService" />
    
-<!--   <li> -->
-<!--      <FORM METHOD="post" ACTION="emp.do" > -->
-<!--        <b>選擇員工編號:</b> -->
-<!--        <select size="1" name="empno"> -->
-<%--          <c:forEach var="empVO" items="${empSvc.all}" >  --%>
-<%--           <option value="${empVO.empno}">${empVO.empno} --%>
-<%--          </c:forEach>    --%>
-<!--        </select> -->
-<!--        <input type="hidden" name="action" value="getOne_For_Display"> -->
-<!--        <input type="submit" value="送出"> -->
-<!--     </FORM> -->
-<!--   </li> -->
+  <li>
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/stud/stud.do" >
+       <b>選擇錄音室編號:</b>
+       <select size="1" name="studID">
+         <c:forEach var="studVO" items="${studSvc.all}" > 
+          <option value="${studVO.studID}">${studVO.studID}
+         </c:forEach>   
+       </select>
+       <input type="hidden" name="action" value="getOne_For_Display">
+       <input type="submit" value="送出">
+    </FORM>
+  </li>
   
-<!--   <li> -->
-<!--      <FORM METHOD="post" ACTION="emp.do" > -->
-<!--        <b>選擇員工姓名:</b> -->
-<!--        <select size="1" name="empno"> -->
-<%--          <c:forEach var="empVO" items="${empSvc.all}" >  --%>
-<%--           <option value="${empVO.empno}">${empVO.ename} --%>
-<%--          </c:forEach>    --%>
-<!--        </select> -->
-<!--        <input type="hidden" name="action" value="getOne_For_Display"> -->
-<!--        <input type="submit" value="送出"> -->
-<!--      </FORM> -->
-<!--   </li> -->
+  <li>
+     <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/stud/stud.do" >
+       <b>選擇錄音室名稱:</b>
+       <select size="1" name="studID">
+         <c:forEach var="studVO" items="${studSvc.all}" > 
+          <option value="${studVO.studID}">${studVO.studName}
+         </c:forEach>   
+       </select>
+       <input type="hidden" name="action" value="getOne_For_Display">
+       <input type="submit" value="送出">
+     </FORM>
+  </li>
 </ul>
 
 

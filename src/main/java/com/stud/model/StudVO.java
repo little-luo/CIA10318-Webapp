@@ -3,12 +3,12 @@ import java.sql.Date;
 
 public class StudVO implements java.io.Serializable{
 
-	private Integer studID;
-	private String studLoc;
-	private String studName;
-	private Integer capacity;
-	private Double hourlyRate;
-	private String equipment;
+	private Integer studID;    //錄音室編號
+	private String studLoc;    //錄音室地點
+	private String studName;   //錄音室名稱
+	private Integer capacity;  //錄音室收容人數
+	private Double hourlyRate; //每小時租金
+	private String equipment;  //錄音室設備
 	
 	public Integer getStudID() {
 		return studID;

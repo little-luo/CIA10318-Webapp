@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>List One Studio</title>
+<title>單筆錄音室資料</title>
 <style>
  table#table-1 {
 	background-color: #CCCCFF;
@@ -46,7 +46,7 @@
 <h1>listOneStud.jsp</h1>
 <table id="table-1">
 	<tr><td>
-		 <h3>員工資料 - listOneStud.jsp</h3>
+		 <h3>錄音室資料 - listOneStud.jsp</h3>
 		 <h4><a href="<%=request.getContextPath()%>/back-end/emp/select_page.jsp"><img src="<%=request.getContextPath()%>/back-end/emp/images/back1.gif" width="100" height="32" border="0">回首頁</a></h4>
 	</td></tr>
 </table>

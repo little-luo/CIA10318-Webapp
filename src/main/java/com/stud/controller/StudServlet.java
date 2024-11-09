@@ -108,12 +108,19 @@ public class StudServlet extends HttpServlet {
 				errorMsgs.add("錄音室收容人數格式錯誤");
 			}
 			Double hourlyRate = null;
-			try {				
-				hourlyRate = Double.valueOf(req.getParameter("hourlyRate"));
-				if(hourlyRate <= 0) {
+			try {
+				String temp = req.getParameter("hourlyRate");
+				if(temp.trim().isEmpty()) {
 					hourlyRate = 0.0;
-					errorMsgs.add("錄音室租金應大於0");
+					errorMsgs.add("錄音室租金不能空白");
+				}else {
+					hourlyRate = Double.valueOf(req.getParameter("hourlyRate"));					
+					if(hourlyRate <= 0) {
+						hourlyRate = 0.0;
+						errorMsgs.add("錄音室租金應大於0");
+					}
 				}
+				
 			}catch(Exception e) {
 				hourlyRate = 0.0;
 				errorMsgs.add("錄音室租金格式錯誤");
@@ -129,6 +136,11 @@ public class StudServlet extends HttpServlet {
 			}else {
 				studVO = new StudVO();
 				studVO.setStudID(studID);
+				studVO.setStudLoc(studLoc);
+				studVO.setStudName(studName);
+				studVO.setHourlyRate(hourlyRate);
+				studVO.setCapacity(capacity);
+				studVO.setEquipment(equipment);;
 				String url = "/back-end/emp/update_stud_input.jsp";
 				req.setAttribute("errorMsgs", errorMsgs);
 				req.setAttribute("studVO", studVO);

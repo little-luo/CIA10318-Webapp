@@ -13,7 +13,7 @@
 
 <html>
 <head>
-<title>所有員工資料 - listAllStud.jsp</title>
+<title>所有錄音室資料 - listAllStud.jsp</title>
 
 <style>
   table#table-1 {
@@ -54,7 +54,7 @@
 <h4>此頁練習採用 EL 的寫法取值:</h4>
 <table id="table-1">
 	<tr><td>
-		 <h3>所有員工資料 - listAllStud.jsp</h3>
+		 <h3>所有錄音室資料 - listAllStud.jsp</h3>
 		 <h4><a href="<%=request.getContextPath()%>/back-end/emp/select_page.jsp"><img src="<%=request.getContextPath()%>/back-end/images/back1.gif" width="100" height="32" border="0">回首頁</a></h4>
 	</td></tr>
 </table>
