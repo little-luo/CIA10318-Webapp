@@ -70,6 +70,7 @@
 		<th>修改</th>
 		<th>刪除</th>
 	</tr>
+
 	<%@ include file="page1.file" %> 
 	<c:forEach var="studVO" items="${list}" begin="<%=pageIndex%>" end="<%=pageIndex+rowsPerPage-1%>">
 		
@@ -95,6 +96,14 @@
 		</tr>
 	</c:forEach>
 </table>
+<%-- 
+	1.request.getRequestURI()的結果http://localhost:8081/CIA103G6/back-end/emp/listAllStud.jsp?whichPage=1
+	  <A href="<%=request.getRequestURI()%>?whichPage=1">至第一頁</A>&nbsp;
+    2.pageIndex<pageIndexArray[pageNumber-1]
+      目前頁數的第一筆資料的索引值小於最後一頁的第一筆資料的索引值即表示還沒有到最後一頁。
+    3.rowsPerPage<rowNumber
+      總共的資料筆數大於每頁三筆資料，表示可以跳轉到下一頁。  
+ --%>
 <%@ include file="page2.file" %>
 
 </body>
